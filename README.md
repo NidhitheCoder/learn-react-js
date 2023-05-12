@@ -10,4 +10,18 @@ Learn some reactjs with the help of reactjs documents
 
 ### A simple component
 
-- React components implement a render method that takes input data and return what to display. This example uses an XML like syntax called JSX. Input data that is passed into the component can be accessed by render() via this.props.
+- React components implement a `render` method that takes input data and return what to display. This example uses an XML like syntax called JSX. Input data that is passed into the component can be accessed by `render()` via `this.props`.
+
+Simple component example :-
+
+```
+class SayHello extends React.Component {
+    render () {
+        return <div>hello {this.props.name}</div>
+    }
+}
+
+root.render(<SayHello name="Sara" />);
+```
+
+- A component can maintain internal state data that accessed via this.state. When a component's state data changes, the rendered markup will be updated by re-invoking `render()`.
