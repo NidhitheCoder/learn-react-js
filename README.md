@@ -24,4 +24,48 @@ class SayHello extends React.Component {
 root.render(<SayHello name="Sara" />);
 ```
 
+### A stateful component
+
 - A component can maintain internal state data that accessed via this.state. When a component's state data changes, the rendered markup will be updated by re-invoking `render()`.
+
+-
+
+```
+    class Timer extends React.Component {
+            constructor(props) {
+            this.state = { seconds: 0}
+        }
+
+        tick() {
+            this.setState((state) => ({
+                seconds: state.seconds + 1
+            }))
+        }
+
+        componentDidMount() {
+            this.interval = setInterval(() => this.tick(), 1000)
+        }
+
+        componentWillMount() {
+            clearInterval(this.interval)
+        }
+
+        render() {
+
+            return(
+                <div>seconds: {this.state.seconds}
+            )
+        }
+    }
+
+    root.render(<Timer />)
+
+```
+
+### JSX
+
+- `const element = <h1>hello world</h1>;`
+- JSX is an extension of javascript.
+- JSX is a template language.
+- React does'nt require using jSX, but most people find it as a helpful as a visual ait when working with ui inside the javascript code.
+- It also allows react to show more useful error and warning messages.
