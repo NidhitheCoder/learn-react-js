@@ -69,3 +69,21 @@ root.render(<SayHello name="Sara" />);
 - JSX is a template language.
 - React does'nt require using jSX, but most people find it as a helpful as a visual ait when working with ui inside the javascript code.
 - It also allows react to show more useful error and warning messages.
+
+### Add React to a website
+
+- Reference: https://legacy.reactjs.org/docs/add-react-to-a-website.html
+- You can place a container <div> like this anywhere inside the <body> tag.
+- Steps
+
+  - Add a div tag with a unique ID property. unique id property helps to find the div from the javascript code later.
+  - Add needed script tags for react js.
+
+    ```
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="like_button.js" ></script>
+
+    ```
+
+  - Create react component.
