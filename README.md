@@ -87,3 +87,16 @@ root.render(<SayHello name="Sara" />);
     ```
 
   - Create react component.
+
+  ### Create React App
+
+  - Create react app is the best way to start building single page applications.
+  - it setup in your development environment so that you can use the latest javascript features, provide a nice developer experience and optimizes app production.
+  - you need node >= 14.0.0 and npm >= 5.6
+
+  - To create a react project,
+    ```
+        npx create-react-app my-app
+        cd my-app
+        npm start
+    ```
