@@ -132,3 +132,10 @@ root.render(<SayHello name="Sara" />);
 2. Nx - It is a toolkit for full-stack monorepo development, with build in support for react, next js and express and more.
 3. Parcel - Parcel is a fast, zero configuration web application bundler that works with react.
 4. Razzle - - Razzle is a server-rendering framework that doesn't require any configuration, but offers more flexibility that next js.
+
+
+### creating a toolchain from scratch
+- A javascript build chain basically typically consist of:
+    1. Package manager - A package manager, such as `yarn` or `npm`. It lets you take advantage of vast ecosystem of third-party packages, and easily install or update them.
+    2. Bundler - A bundler, such as a `webpack` or `parcel`. It lets you write modular code and bundle it together into small packages to optimize load time.
+    3. Compiler - A compiler such as `babel`. It lets you write modern javascript that still works in older browser.
