@@ -86,8 +86,6 @@ root.render(<SayHello name="Sara" />);
 
     ```
 
-  - Create react component.
-
   ### Create React App
 
   - Create react app is the best way to start building single page applications.
@@ -100,3 +98,37 @@ root.render(<SayHello name="Sara" />);
         cd my-app
         npm start
     ```
+
+### Next Js
+
+- Next js is a popular and lightweight framework for static and server rendered applications build with react . It includes styling and routing solutions out of the box, And assume that we are using node.js as the server environment.
+- Next js is a flexible react framework that gives you building block to create fast web applications.
+- Next js handles the tooling and configuration needed for react and provide additional structures, features, and optimizations for your application.
+-
+
+: Few things for building web applications.
+
+- User interface
+- Routing
+- Data fetching
+- Rendering
+- Integrations
+- Infrastructure
+- Performance
+- Scalability
+- Developer Experience
+
+### Gatsby
+
+- Gatsby is the best way to create static websites with react.
+- Gatsby lets you use react components but outputs are pre-rendered HTML and CSS to guarantee the fastest load-time.
+- You can pulling data from headless CMS easily.
+- Gatsby is an open-source static site generator build on top of Node.js using react and Graph-SQL.
+- 
+
+### Flexible tool chains
+
+1. Neutrino- It combines the power of webpack with the simplicity of the presets, and includes a presets of react app and react components.
+2. Nx - It is a toolkit for full-stack monorepo development, with build in support for react, next js and express and more.
+3. Parcel - Parcel is a fast, zero configuration web application bundler that works with react.
+4. Razzle - - Razzle is a server-rendering framework that doesn't require any configuration, but offers more flexibility that next js.
