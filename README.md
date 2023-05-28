@@ -124,7 +124,7 @@ root.render(<SayHello name="Sara" />);
 - Gatsby lets you use react components but outputs are pre-rendered HTML and CSS to guarantee the fastest load-time.
 - You can pulling data from headless CMS easily.
 - Gatsby is an open-source static site generator build on top of Node.js using react and Graph-SQL.
-- 
+-
 
 ### Flexible tool chains
 
@@ -133,9 +133,39 @@ root.render(<SayHello name="Sara" />);
 3. Parcel - Parcel is a fast, zero configuration web application bundler that works with react.
 4. Razzle - - Razzle is a server-rendering framework that doesn't require any configuration, but offers more flexibility that next js.
 
-
 ### creating a toolchain from scratch
+
 - A javascript build chain basically typically consist of:
-    1. Package manager - A package manager, such as `yarn` or `npm`. It lets you take advantage of vast ecosystem of third-party packages, and easily install or update them.
-    2. Bundler - A bundler, such as a `webpack` or `parcel`. It lets you write modular code and bundle it together into small packages to optimize load time.
-    3. Compiler - A compiler such as `babel`. It lets you write modern javascript that still works in older browser.
+  1. Package manager - A package manager, such as `yarn` or `npm`. It lets you take advantage of vast ecosystem of third-party packages, and easily install or update them.
+  2. Bundler - A bundler, such as a `webpack` or `parcel`. It lets you write modular code and bundle it together into small packages to optimize load time.
+  3. Compiler - A compiler such as `babel`. It lets you write modern javascript that still works in older browser.
+
+## CDN Links
+
+- A CDN(Content Delivery Network) is a network of servers that distributes content from an origin server throughout the world by caching content to close where each end user is accessing the internet via a web-enabled device. The content they request is first stored on the origin server and is then replicated and store elsewhere as needed.
+
+- Both react and reactDOM are available over a CDN.
+
+  ```
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  ```
+
+- The versions above are only meant for development, and are not suitable for production.
+
+- Minified production version for react:
+
+  ```
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  ```
+
+- Why the crossorigin attribute ?
+  - A crossorigin attribute sets the mode of the request to an HTTP CORS request.
+  - A webpage often make a requests to load resources on other servers.
+  - A crossorigin request is a request for a resource from another origin.A resource can be a stylesheets, iframes, images, fonts or a script.
+  - CORS is an HTTP-header based mechanism that allows a server to indicate any origins (domains. schemes, or port) other that its own from which a browser should permit loading resources.
+  - `<script crossorigin src="..."></script>`
+  - We need to set crossorigin attribute when serve react from a CDN.
