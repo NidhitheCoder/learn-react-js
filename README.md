@@ -169,3 +169,17 @@ root.render(<SayHello name="Sara" />);
   - CORS is an HTTP-header based mechanism that allows a server to indicate any origins (domains. schemes, or port) other that its own from which a browser should permit loading resources.
   - `<script crossorigin src="..."></script>`
   - We need to set crossorigin attribute when serve react from a CDN.
+
+### Release channels
+
+- use-cases of react's release channels
+
+1. Latest - latest is for stable, semver react releases. It's what you get when you install react from npm. user this for all user applications.
+- 
+
+2. Next- next track the main branch for the react source code repository. use this for integration testing between react and third party projects.
+
+3. Experimental - Experimental includes experimental apis and features that are'nt available in the stable releases. these also track the main branch, but with additional branch features flags turned on.
+
+
+- All releases are published to npm, but only latest uses semantic versioning. 
