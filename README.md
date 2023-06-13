@@ -191,3 +191,12 @@ root.render(<SayHello name="Sara" />);
 - JSX produces react Elements.
 - A component that contain both login and template/markup in a single file.
 - React does'nt require using JSX, but most people must find it helpful as a visual aid when working with UI inside the javascript code. It also allows react to show more useful error and warning messages.
+
+### Elements
+
+- Elements are smallest building block of react apps.
+- An element describes what you want to see on the screen.
+- `const element = <h1>Hello World!</h1>;`
+- Unlike DOM elements react elements are plain objects, and are cheap to create.
+- react DOM take care of updating the DOM to match the React elements.
+- Elements are what components made of.
