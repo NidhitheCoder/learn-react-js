@@ -191,6 +191,9 @@ root.render(<SayHello name="Sara" />);
 - JSX produces react Elements.
 - A component that contain both login and template/markup in a single file.
 - React does'nt require using JSX, but most people must find it helpful as a visual aid when working with UI inside the javascript code. It also allows react to show more useful error and warning messages.
+- you can put any valid javascript expressions inside the curly braces in JSX.
+- After compilation, JSX expressions become regular javascript functions calls and evaluate to javascript objects. This means you can use JSX inside if statement and for loops, assign into a variables, accept it as arguments, and return it from functions.
+- You may use quotes to specify string literals as attributes.
 
 ### Elements
 
