@@ -175,11 +175,31 @@ root.render(<SayHello name="Sara" />);
 - use-cases of react's release channels
 
 1. Latest - latest is for stable, semver react releases. It's what you get when you install react from npm. user this for all user applications.
-- 
+
+-
 
 2. Next- next track the main branch for the react source code repository. use this for integration testing between react and third party projects.
 
 3. Experimental - Experimental includes experimental apis and features that are'nt available in the stable releases. these also track the main branch, but with additional branch features flags turned on.
 
+- All releases are published to npm, but only latest uses semantic versioning.
+- The only officially supported release channel for user-facing applications is latest.
 
-- All releases are published to npm, but only latest uses semantic versioning. 
+### JSX
+
+- JSX is a syntax extension to javascript.JSX reminds you of a template language, but it comes with the full power of javascript.
+- JSX produces react Elements.
+- A component that contain both login and template/markup in a single file.
+- React does'nt require using JSX, but most people must find it helpful as a visual aid when working with UI inside the javascript code. It also allows react to show more useful error and warning messages.
+- you can put any valid javascript expressions inside the curly braces in JSX.
+- After compilation, JSX expressions become regular javascript functions calls and evaluate to javascript objects. This means you can use JSX inside if statement and for loops, assign into a variables, accept it as arguments, and return it from functions.
+- You may use quotes to specify string literals as attributes.
+
+### Elements
+
+- Elements are smallest building block of react apps.
+- An element describes what you want to see on the screen.
+- `const element = <h1>Hello World!</h1>;`
+- Unlike DOM elements react elements are plain objects, and are cheap to create.
+- react DOM take care of updating the DOM to match the React elements.
+- Elements are what components made of.
