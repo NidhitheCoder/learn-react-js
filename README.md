@@ -203,3 +203,6 @@ root.render(<SayHello name="Sara" />);
 - Unlike DOM elements react elements are plain objects, and are cheap to create.
 - react DOM take care of updating the DOM to match the React elements.
 - Elements are what components made of.
+- React elements are immutable.
+- Once you create an element you can't change its children or attributes.
+- the only way to update the ui is to create a new element.
