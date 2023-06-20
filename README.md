@@ -205,4 +205,5 @@ root.render(<SayHello name="Sara" />);
 - Elements are what components made of.
 - React elements are immutable.
 - Once you create an element you can't change its children or attributes.
-- the only way to update the ui is to create a new element.
+- The only way to update the ui is to create a new element, and pass it to root.render().
+- React DOM compares the element and its children to previous one , and only applies the DOM updates necessary bring the DOM to the desired state.
