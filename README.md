@@ -207,3 +207,31 @@ root.render(<SayHello name="Sara" />);
 - Once you create an element you can't change its children or attributes.
 - The only way to update the ui is to create a new element, and pass it to root.render().
 - React DOM compares the element and its children to previous one , and only applies the DOM updates necessary bring the DOM to the desired state.
+
+### Components
+
+- Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+- Components are like javascript functions. they accept arbitrary inputs(called "props") and return react elements describing what should appear on the screen.
+
+Javascript function component :-
+
+```
+function Welcome(props) {
+  return<h1>Hello, {props.name}</h1>
+}
+
+const element = <Welcome name="Smith">;
+
+```
+
+- ES6 class component :-
+
+```
+class Welcome extends React.component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>
+  }
+}
+
+const element = <Welcome name="Sara">;
+```
