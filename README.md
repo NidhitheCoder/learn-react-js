@@ -203,3 +203,40 @@ root.render(<SayHello name="Sara" />);
 - Unlike DOM elements react elements are plain objects, and are cheap to create.
 - react DOM take care of updating the DOM to match the React elements.
 - Elements are what components made of.
+- React elements are immutable.
+- Once you create an element you can't change its children or attributes.
+- The only way to update the ui is to create a new element, and pass it to root.render().
+- React DOM compares the element and its children to previous one , and only applies the DOM updates necessary bring the DOM to the desired state.
+
+### Components
+
+- Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+- Components are like javascript functions. they accept arbitrary inputs(called "props") and return react elements describing what should appear on the screen.
+- Always start component names with capital letter. React treats components stating with lowercase as DOM tags.
+
+Javascript function component :-
+
+```
+function Welcome(props) {
+  return<h1>Hello, {props.name}</h1>
+}
+
+const element = <Welcome name="Smith">;
+
+```
+
+- ES6 class component :-
+
+```
+class Welcome extends React.component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>
+  }
+}
+
+const element = <Welcome name="Sara">;
+```
+
+### Composing components
+- Components can refer other components in their input.This lets us to use same component abstraction for any level of detail.
+- whether you declare a component as a function or class , it must never modify its own props. such functions are called pure becouse they do not attempt to change their inputs, and always return the same result for the same inputs.
