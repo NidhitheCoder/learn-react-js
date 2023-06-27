@@ -212,6 +212,7 @@ root.render(<SayHello name="Sara" />);
 
 - Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
 - Components are like javascript functions. they accept arbitrary inputs(called "props") and return react elements describing what should appear on the screen.
+- Always start component names with capital letter. React treats components stating with lowercase as DOM tags.
 
 Javascript function component :-
 
@@ -235,3 +236,7 @@ class Welcome extends React.component {
 
 const element = <Welcome name="Sara">;
 ```
+
+### Composing components
+- Components can refer other components in their input.This lets us to use same component abstraction for any level of detail.
+- whether you declare a component as a function or class , it must never modify its own props. such functions are called pure becouse they do not attempt to change their inputs, and always return the same result for the same inputs.
