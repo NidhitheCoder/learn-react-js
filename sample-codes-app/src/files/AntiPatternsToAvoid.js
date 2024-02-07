@@ -4,6 +4,7 @@ import Article from "./Article";
 import NavBar from "./Navbar";
 import Parent from "./Parent";
 import WorkHard from "./WorkHard";
+import ReduceBundle from "./ReduceBundle";
 
 
 const AntiPatternsToAvoid = () => {
@@ -24,6 +25,8 @@ const AntiPatternsToAvoid = () => {
             <NavBar />
             <Article />
         </React.Fragment>
+        {/* Huge bundle */}
+        <ReduceBundle />
     </div>)
 }
 
@@ -35,3 +38,4 @@ export default AntiPatternsToAvoid;
 // 3. Too much work. The component run on all state changes. use useMemo hook.
 // 4. Remove pointless div's. use <React.Fragment> or <>.
 // 5. Messy files. structure all files with its own folder.
+// 6. Reduce bundle size. React.lazy function helps to reduce the bundle size.
