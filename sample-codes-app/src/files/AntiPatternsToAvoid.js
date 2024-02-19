@@ -5,6 +5,11 @@ import NavBar from "./Navbar";
 import Parent from "./Parent";
 import WorkHard from "./WorkHard";
 import ReduceBundle from "./ReduceBundle";
+import PropDrilling from "./PropsDrilling";
+import PropPlowing from "./PropPlowing";
+import MessyEvents from "./MessyEvents";
+import GroupStates from "./GroupStates";
+import HooksForState from "./HooksForState";
 
 
 const AntiPatternsToAvoid = () => {
@@ -27,6 +32,15 @@ const AntiPatternsToAvoid = () => {
         </React.Fragment>
         {/* Huge bundle */}
         <ReduceBundle />
+        {/* PropDrilling */}
+        <PropDrilling />
+        {/* Prop plowing */}
+        <PropPlowing />
+        {/* Messy Events */}
+        <MessyEvents />
+        {/* Group states */}
+        <GroupStates />
+        <HooksForState />
     </div>)
 }
 
@@ -39,3 +53,7 @@ export default AntiPatternsToAvoid;
 // 4. Remove pointless div's. use <React.Fragment> or <>.
 // 5. Messy files. structure all files with its own folder.
 // 6. Reduce bundle size. React.lazy function helps to reduce the bundle size.
+// 7. PropDrilling. Use redux or contexts to avoid prop drilling.
+// 8. PropPlowing. A child components with lots of props so we have an object contains 
+//    keys that exactly matches to the child components props so we can use spread operator.
+// 9. Messy Events. Curried function helps to avoid messy functions.
